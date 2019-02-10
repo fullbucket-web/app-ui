@@ -1,0 +1,12 @@
+@import '../../node_modules/react-bulma-components/dist/react-bulma-components.min.css';
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+// Partials
+@import './partials/navbar';
+@import './partials/tabs';
+@import './partials/betamessage';
+@import './partials/requestcard';
+
+* {
+  font-family: 'Karla', sans-serif;
+}
