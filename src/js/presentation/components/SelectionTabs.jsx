@@ -13,7 +13,7 @@ const SelectionTabs = (props: Props) => {
   return (
     <Tabs className="Tabs__mainpage">
       <Tab active>Requests</Tab>
-      <Tab active={activeTab === TabNames.REQUESTS_TAB}>Offers</Tab>
+      <Tab active={(activeTab === TabNames.REQUESTS_TAB).toString()}>Offers</Tab>
     </Tabs>
   );
 };

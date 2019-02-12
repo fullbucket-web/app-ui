@@ -6,7 +6,8 @@ module.exports = merge(common, {
   mode: 'development',
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true
   },
   watchOptions: {
     ignored: /node_modules/

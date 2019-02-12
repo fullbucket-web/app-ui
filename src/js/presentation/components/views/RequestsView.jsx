@@ -4,7 +4,7 @@ import React from 'react';
 import RequestCard from '../cards/RequestCard';
 
 type Props = {
-  requests: object
+  requests: Object
 };
 
 const RequestsView = (props: Props) => {

@@ -30,7 +30,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Fullbucket',
+      title: 'FullBucket Web',
       template: './src/html/index.html',
       filename: 'index.html',
       inject: false,

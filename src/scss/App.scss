@@ -1,12 +1,23 @@
-@import '../../node_modules/react-bulma-components/dist/react-bulma-components.min.css';
+// Font
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+// Palette
+$primary: #345995;
+$info: #0582ca;
+$success: #44af69;
+$warning: #eac435;
+$danger: #a20021;
+$body-background-color: #efefef;
 
 // Partials
 @import './partials/navbar';
 @import './partials/tabs';
 @import './partials/betamessage';
 @import './partials/requestcard';
+@import './partials/hero';
+@import './partials/content';
 
-* {
-  font-family: 'Karla', sans-serif;
-}
+$family-sans-serif: 'Karla', sans-serif;
+
+// Vendor
+@import './vendor';

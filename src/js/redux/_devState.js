@@ -72,4 +72,6 @@ export const postsState = {
   }
 };
 
+export const editorState = {};
+
 export const otherState = {};

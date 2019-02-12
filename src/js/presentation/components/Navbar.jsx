@@ -27,20 +27,22 @@ class FullBucketNavbar extends React.Component<Props, State> {
   render() {
     const { open } = this.state;
     return (
-      <Navbar color="info" fixed="top" active={open}>
-        <NavbarBrand>
-          <NavbarItem className="Navbar-Title">{NAVBAR_TITLE}</NavbarItem>
-          <Navbar.Burger active={open} onClick={this.handleClick} />
-        </NavbarBrand>
-        <Navbar.Menu active={open}>
-          <Navbar.Container>
-            <Navbar.Item href="#">Home</Navbar.Item>
-          </Navbar.Container>
-          <Navbar.Container position="end">
-            <Navbar.Item href="#">Signed in as /u/MegaUltaSonic</Navbar.Item>
-          </Navbar.Container>
-        </Navbar.Menu>
-      </Navbar>
+      <div>
+        <Navbar color="primary" fixed="top" active={open}>
+          <NavbarBrand>
+            <NavbarItem className="Navbar-Title">{NAVBAR_TITLE}</NavbarItem>
+            <Navbar.Burger active={open.toString()} onClick={this.handleClick} />
+          </NavbarBrand>
+          <Navbar.Menu active={open.toString()}>
+            <Navbar.Container>
+              <Navbar.Item href="#">Home</Navbar.Item>
+            </Navbar.Container>
+            <Navbar.Container position="end">
+              <Navbar.Item href="#">Signed in as MegaUltraSonic</Navbar.Item>
+            </Navbar.Container>
+          </Navbar.Menu>
+        </Navbar>
+      </div>
     );
   }
 }

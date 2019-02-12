@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.0.0/trix.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullbucket</title>
+    <title>FullBucket Web</title>
   </head>
 
   <body>
     <div id="app"></div>
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script src="https://rawgit.com/basecamp/trix/master/dist/trix.js"></script>
   </body>
 </html>

@@ -1,3 +1,6 @@
-// .Navbar-Title {
-// font-size: 1.25em;
-// }
+$navbar-height: 4rem;
+
+.Navbar-Title,
+.navbar-item {
+  font-size: 1.3rem;
+}
