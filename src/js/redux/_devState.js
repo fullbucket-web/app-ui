@@ -1,8 +1,8 @@
 // @flow
 
-/* The postsState holds the state of current posts loaded on the system.
+/* The requestsState holds the state of current requests loaded on the system.
 NOT ALL OF THESE WILL BE LOADED FROM THE API ON APP LOAD. */
-export const postsState = {
+export const requestsState = {
   requests: {
     'ce6a1e30-b611-4751-9743-79f5fb7d0d7c': {
       user: 'Discombobulated_Ship',
@@ -72,6 +72,75 @@ export const postsState = {
   }
 };
 
-export const editorState = {};
+export const userSessionState = {
+  userDetails: {
+    id: 1,
+    name: 'Test User'
+  }
+};
+export const editorState = {
+  activeDocument: {
+    id: 'update-2-e30d3f7b545e43fe7729ecd680ed86a948405ba1',
+    title: 'Update 2',
+    html:
+      '<h1><!--block-->Testing Render Function</h1><div><!--block-->This is a test that it\'s all rendered properly as it should.<br><strong>Bold Text.<br></strong><em>Italics Text.<br></em><del>Strikethrough.<br></del><a href="https://example.com">Hyperlink.</a></div><blockquote><!--block-->Quote.</blockquote><pre><!--block-->Code block\nif (this.render === "good") {\n     return "Yay!"\n}</pre><ul><li><!--block-->Bullet Point<ul><li><!--block-->Indented bullet point<ul><li><!--block-->Even more indented bullet point</li></ul></li></ul></li></ul><ol><li><!--block-->Number One?</li><li><!--block-->Number Two.<ol><li><!--block-->Sub-Number One</li><li><!--block-->Sub-Number Two<ol><li><!--block-->Sub-Sub-Number One</li><li><!--block-->Sub-Sub-Number One</li></ol></li></ol></li></ol><h1><!--block--><a href="https://example.com"><strong><em><del>A little bit of everything.</del></em></strong></a></h1>'
+  }
+};
+
+export const newsState = [
+  {
+    id: 'update-2-075ccd569acbf805d9d4f9fad049cb9e142be843',
+    title: 'Update 2',
+    author: {
+      name: 'Tomdango'
+    },
+    comments: [
+      {
+        user: '221B_BakerSt_',
+        content: 'This is a really fun offer and will mean so much to someone!',
+        points: 127,
+        timestamp: '2018-06-09T18:51:40.997Z',
+        replies: []
+      },
+      {
+        user: 'Crentist_the-Dentist',
+        content: 'This is a great offer! Are all of these cars yours? Very neat :)',
+        timestamp: '2018-06-09T18:53:40.997Z',
+        points: 68,
+        replies: [
+          {
+            user: 'Discombobulated_Ship',
+            content:
+              'The red one is mines, the black one my biz partners. He cheaped out and went with the old hard top :O',
+            timestamp: '2018-06-09T19:04:40.997Z',
+            points: 48,
+            replies: [
+              {
+                user: 'felix204',
+                content:
+                  'i dont think cheaped out should be a phrase used when referring to a Lamborghini lol',
+                timestamp: '2018-06-09T20:34:40.997Z',
+                points: 51,
+                replies: []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    description: 'Render Testing',
+    html: `<h1><!--block-->Testing Render Function</h1><div><!--block-->This is a test that it's all rendered properly as it should. This here is a test of a very very very, maybe even an excruciatingly long, maybe it's even deadly, well nevertheless it's a very long sentence.<br><strong>Bold Text.<br></strong><em>Italics Text.<br></em><del>Strikethrough.<br></del><a href="https://example.com">Hyperlink.</a></div><blockquote><!--block-->Quote.</blockquote><pre><!--block-->Code block\
+if (this.render === "good") {\
+    return "Yay!"\
+}</pre><ul><li><!--block-->Bullet Point<ul><li><!--block-->Indented bullet point<ul><li><!--block-->Even more indented bullet point</li></ul></li></ul></li></ul><ol><li><!--block-->Number One?</li><li><!--block-->Number Two.<ol><li><!--block-->Sub-Number One</li><li><!--block-->Sub-Number Two<ol><li><!--block-->Sub-Sub-Number One</li><li><!--block-->Sub-Sub-Number One</li></ol></li></ol></li></ol><h1><!--block--><a href="https://example.com"><strong><em><del>A little bit of everything.</del></em></strong></a></h1>`
+  }
+];
 
 export const otherState = {};
+
+export const uiState = {
+  postModal: {
+    active: false,
+    postId: ''
+  }
+};

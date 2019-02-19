@@ -1,1 +1,57 @@
 @import '../../node_modules/bulma/bulma.sass';
+
+$pane-header-height: 64px;
+
+.slide-pane {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  min-width: 100px;
+  height: 100%;
+  position: fixed;
+  padding: 20px;
+  // box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s;
+  will-change: transform;
+  &:focus {
+    outline-style: none;
+  }
+
+  &_from_bottom {
+    margin-top: $navbar-height;
+    transform: translateY(100%);
+    &.ReactModal__Content--after-open {
+      transform: translateY(0%);
+      position: initial;
+    }
+    &.ReactModal__Content--before-close {
+      transform: translateY(100%);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    // padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  &__overlay.ReactModal__Overlay--after-open {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s;
+  }
+  &__overlay.ReactModal__Overlay--before-close {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  &__close {
+    // margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    position: relative;
+    overflow-y: scroll;
+    flex: 1 1 auto;
+  }
+}

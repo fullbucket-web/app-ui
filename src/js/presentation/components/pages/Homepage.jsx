@@ -1,23 +1,19 @@
+// @flow
 import React from 'react';
 import Heading from 'react-bulma-components/lib/components/heading';
 import Columns from 'react-bulma-components/lib/components/columns';
-import News from '../News';
-
-const NewsData = [
-  {
-    id: 1,
-    title: 'Welcome New Team Members!'
-  }
-];
+import NewsContainer from '../../../redux/containers/NewsContainer';
+import { HOMEPAGE_GREETING } from '../../../core/constants/uiStrings';
+import ViewPostContainer from '../../../redux/containers/ViewPostContainer';
 
 const Homepage = () => {
   return (
     <div>
-      <Heading size={2}>Home</Heading>
+      <Heading size={2}>{HOMEPAGE_GREETING}</Heading>
       <Columns>
         <Columns.Column size="two-thirds">
-          <Heading size={3}>News</Heading>
-          <News news={NewsData} />
+          <NewsContainer />
+          <ViewPostContainer />
         </Columns.Column>
       </Columns>
     </div>

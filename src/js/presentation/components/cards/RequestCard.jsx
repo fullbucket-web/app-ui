@@ -6,8 +6,15 @@ import Button from 'react-bulma-components/lib/components/button';
 import Level from 'react-bulma-components/lib/components/level';
 import Box from 'react-bulma-components/lib/components/box';
 
+type Request = {
+  content: string,
+  title: string,
+  user: string,
+  points: number
+};
+
 type Props = {
-  request: Object
+  request: Request
 };
 
 const RequestCard = (props: Props) => {
@@ -19,10 +26,7 @@ const RequestCard = (props: Props) => {
           <Content>
             <p>
               <h5>{request.title}</h5>
-              <small>
-                Posted By
-                {` ${request.user}`}
-              </small>
+              <small>{`Posted By ${request.user}`}</small>
               <hr />
               {request.content.split(/\n/g).map(value => (
                 <p>{value}</p>

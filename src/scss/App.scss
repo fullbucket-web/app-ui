@@ -1,23 +1,38 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+@import url('https://fonts.googleapis.com/css?family=Assistant:200,300,400,500,600');
 
 // Palette
-$primary: #345995;
-$info: #0582ca;
-$success: #44af69;
-$warning: #eac435;
-$danger: #a20021;
-$body-background-color: #efefef;
+$primary: #26547c;
+$info: #70c1b3;
+$success: #06d6a0;
+$warning: #ffd166;
+$danger: #ff1654;
+$body-background-color: #fff;
 
 // Partials
 @import './partials/navbar';
 @import './partials/tabs';
 @import './partials/betamessage';
-@import './partials/requestcard';
 @import './partials/hero';
 @import './partials/content';
+@import './partials/postview';
+@import './partials/cards';
 
-$family-sans-serif: 'Karla', sans-serif;
+$family-sans-serif: 'Assistant', sans-serif;
+$weight-light: 200;
+$weight-normal: 300;
+$weight-medium: 400;
+$weight-semibold: 500;
+$weight-bold: 600;
 
 // Vendor
 @import './vendor';
+
+.slide-pane__header {
+  top: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

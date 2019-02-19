@@ -1,6 +1,54 @@
 $navbar-height: 4rem;
 
+.navbar {
+  height: $navbar-height;
+  position: absolute;
+  top: 0;
+}
+
+.navbar-brand {
+  height: $navbar-height;
+  top: 0;
+}
+
 .Navbar-Title,
 .navbar-item {
   font-size: 1.3rem;
+}
+
+.router-navbar {
+  &-link {
+    margin-right: 5px;
+    color: $body-background-color !important;
+    @media (max-width: 768px) {
+      color: $primary !important;
+      margin-right: 0;
+    }
+    height: 100%;
+    padding-left: 150px;
+    text-decoration: none;
+    &__active {
+      background-color: $body-background-color;
+      color: $primary !important;
+      @media (max-width: 768px) {
+        background-color: $primary !important;
+        color: $body-background-color !important;
+        &:focus,
+        &:hover,
+        &:visited,
+        &:link,
+        &:active {
+          color: $body-background-color !important;
+        }
+      }
+    }
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+      text-decoration: none;
+      color: $primary !important;
+    }
+  }
 }

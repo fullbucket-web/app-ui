@@ -1,0 +1,20 @@
+.news-card {
+  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 43px -13px rgba($primary, 0.75);
+    -moz-box-shadow: 5px 5px 43px -13px rgba($primary, 0.75);
+    box-shadow: 5px 5px 43px -13px rgba($primary, 0.75);
+    border: 1px solid #ccc;
+    -webkit-transform: scale(1.015, 1.015);
+    transform: scale(1.015, 1.015);
+  }
+
+  &-title {
+    width: '100%';
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+  }
+}

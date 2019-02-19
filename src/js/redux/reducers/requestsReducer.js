@@ -1,6 +1,6 @@
 // @flow
 // import * as types from '../constants/actionTypes';
-import { postsState } from '../_devState';
+import { requestsState } from '../_devState';
 
 type State = {};
 
@@ -9,7 +9,7 @@ type Action = {
   payload: any
 };
 
-const requestsReducer = (state: State = postsState.requests, action: Action): State => {
+const requestsReducer = (state: State = requestsState.requests, action: Action): State => {
   switch (action.type) {
     default:
       return state;

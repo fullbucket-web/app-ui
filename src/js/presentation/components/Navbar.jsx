@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from 'react-bulma-components/lib/components/navbar';
 import NavbarBrand from 'react-bulma-components/lib/components/navbar/components/brand';
 import NavbarItem from 'react-bulma-components/lib/components/navbar/components/item';
+import { Link } from 'react-router-dom';
 import { NAVBAR_TITLE } from '../../core/constants/uiStrings';
 
 type Props = {};
@@ -35,7 +36,17 @@ class FullBucketNavbar extends React.Component<Props, State> {
           </NavbarBrand>
           <Navbar.Menu active={open.toString()}>
             <Navbar.Container>
-              <Navbar.Item href="#">Home</Navbar.Item>
+              <Link to="/">
+                <Navbar.Item className="router-navbar-link router-navbar-link__active">
+                  Home
+                </Navbar.Item>
+              </Link>
+              <Link to="/editor">
+                <Navbar.Item className="router-navbar-link">Editor</Navbar.Item>
+              </Link>
+              <Link to="/legal">
+                <Navbar.Item className="router-navbar-link">Legal</Navbar.Item>
+              </Link>
             </Navbar.Container>
             <Navbar.Container position="end">
               <Navbar.Item href="#">Signed in as MegaUltraSonic</Navbar.Item>
