@@ -1,10 +1,17 @@
 /* eslint-disable react/prefer-stateless-function */
 // @flow
 import React from 'react';
-import RequestCard from '../cards/RequestCard';
+import RequestCard from '../components/cards/RequestCard';
+
+type Request = {
+  content: string,
+  title: string,
+  user: string,
+  points: number
+};
 
 type Props = {
-  requests: Object
+  requests: Request
 };
 
 const RequestsView = (props: Props) => {

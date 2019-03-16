@@ -1,6 +1,6 @@
 import React from 'react';
 import Content from 'react-bulma-components/lib/components/content';
-import * as legal from '../../../core/constants/legal';
+import * as legal from '../../core/constants/legal';
 
 const LegalView = () => {
   return (

@@ -5,12 +5,12 @@ import Columns from 'react-bulma-components/lib/components/columns';
 import HtmlToReactParser from 'html-to-react/lib/parser';
 import Modal from 'react-modal';
 import Button from 'react-bulma-components/lib/components/button';
-import Comments from '../Comments';
+import Comments from '../components/Comments';
 import {
   NOT_FOUND_POST_TITLE,
   NOT_FOUND_POST_HELP,
   NOT_FOUND_POST_TRY_AGAIN
-} from '../../../core/constants/uiStrings';
+} from '../../core/constants/uiStrings';
 
 type Props = {
   news: Object,

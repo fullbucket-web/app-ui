@@ -1,6 +1,6 @@
 // @flow
 import { connect } from 'react-redux';
-import ViewPost from '../../presentation/components/pages/ViewPost';
+import PostView from '../../presentation/views/PostView';
 import { closePostModal } from '../actions/uiActions';
 
 const mapStateToProps = state => {
@@ -22,4 +22,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ViewPost);
+)(PostView);
