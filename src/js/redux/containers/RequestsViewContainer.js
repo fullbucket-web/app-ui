@@ -1,6 +1,6 @@
 // @flow
 import { connect } from 'react-redux';
-import RequestsView from '../../presentation/components/views/RequestsView';
+import RequestsView from '../../presentation/views/RequestsView';
 
 const mapStateToProps = state => {
   return {

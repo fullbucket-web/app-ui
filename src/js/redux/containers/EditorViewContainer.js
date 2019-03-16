@@ -1,6 +1,6 @@
 // @flow
 import { connect } from 'react-redux';
-import Editor from '../../presentation/components/pages/Editor';
+import Editor from '../../presentation/views/EditorView';
 
 const mapStateToProps = state => {
   return {

@@ -1,13 +1,11 @@
 // @flow
 import React from 'react';
-import Box from 'react-bulma-components/lib/components/box';
-import Media from 'react-bulma-components/lib/components/media';
 import Heading from 'react-bulma-components/lib/components/heading';
 import NewsCard from './cards/NewsCard';
 
 type Props = {
-  news: object,
-  openModal: Function
+  news: Object,
+  openPost: Function
 };
 
 const News = (props: Props) => {

@@ -9,38 +9,34 @@ type Props = {
 };
 type State = {
   html: string,
-  text: string
+  text: string,
+  editing: boolean
 };
 
 class WYSIWYG extends React.Component<Props, State> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
+    // this.handleChange = this.handleChange.bind(this);
     const { html } = this.props;
     this.state = {
-      html,
-      text: '',
-      editing: false
+      html
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(html, text) {
+  handleChange = (html: string) => {
     clearTimeout(this.saveTimeout);
-    this.setState({ html, text, editing: true });
-    window.console.log(JSON.stringify(html));
+    this.setState({ html });
     this.saveTimeout = setTimeout(() => {
       notify.show('Saved!', 'success', 1500);
     }, 1000);
-  }
+  };
+
+  handleChange: Function;
+
+  saveTimeout: TimeoutID;
 
   render() {
     const { html } = this.state;
-    const mergeTags = [
-      {
-        trigger: '@',
-        tags: [{ name: 'Dominic St-Pierre', tag: '@dominic' }, { name: 'John Doe', tag: '@john' }]
-      }
-    ];
     return (
       <Content>
         <TrixEditor
@@ -48,7 +44,6 @@ class WYSIWYG extends React.Component<Props, State> {
           autoFocus
           value={html}
           placeholder="Let the words flow..."
-          mergeTags={mergeTags}
         />
       </Content>
     );

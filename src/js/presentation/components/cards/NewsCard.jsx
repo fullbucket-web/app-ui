@@ -11,7 +11,8 @@ type NewsItem = {
 };
 
 type Props = {
-  newsItem: NewsItem
+  newsItem: NewsItem,
+  openPost: Function
 };
 
 const NewsCard = (props: Props) => {
